@@ -1,0 +1,205 @@
+{
+  "main": {
+    "id": "3991fb72be7bc73c",
+    "type": "split",
+    "children": [
+      {
+        "id": "912bf13fb2840767",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5af04ebde49ea83e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Что сегодня изучил/2026-01-25.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-01-25"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2914068b3af26411",
+    "type": "split",
+    "children": [
+      {
+        "id": "716ef9b950615e22",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3da3b9e4a1d1abf0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ddeed5809a49c724",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6489539e9a913640",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3986736dce106327",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cc1b5e862b912e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8ec6f15e9a401c6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Что сегодня изучил/2026-01-25.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2026-01-25"
+            }
+          },
+          {
+            "id": "f5950fd6242f3751",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Что сегодня изучил/2026-01-25.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2026-01-25"
+            }
+          },
+          {
+            "id": "05a21501227f1cb1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f1b46a119b8f8a90",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "481518f7518f2199",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Что сегодня изучил/2026-01-25.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2026-01-25"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "5af04ebde49ea83e",
+  "lastOpenFiles": [
+    "DevOps-Learning/linux/Текстовые редакторы/Nano.md",
+    "Что сегодня изучил/2026-01-25.md",
+    "DevOps-Learning/linux/Основы командной строки/Архивация(.tar).md",
+    "DevOps-Learning/linux/Текстовые редакторы/vim/Vim — базовое редактирование.md",
+    "DevOps-Learning/linux/Текстовые редакторы/vim/Vim — продвинутая навигация.md",
+    "DevOps-Learning/linux/Текстовые редакторы/vim/Vim.md",
+    "DevOps-Learning/linux/Текстовые редакторы/vim",
+    "DevOps-Learning/linux/Основы командной строки/Сжатие данных.md",
+    "DevOps-Learning/linux/Текстовые редакторы",
+    "Что сегодня изучил",
+    "Welcome.md",
+    "DevOps-Learning/linux/Основы командной строки",
+    "DevOps-Learning/linux",
+    "Untitled.base",
+    "DevOps-Learning"
+  ]
+}
