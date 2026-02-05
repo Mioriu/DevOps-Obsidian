@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-01-31.md",
+                "file": "DevOps-Learning/linux/Продвинутая работа в терминале/SED advanced.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-31"
+              "title": "SED advanced"
             }
           }
         ]
@@ -186,12 +186,15 @@
   },
   "active": "c8fb6d145f12afa2",
   "lastOpenFiles": [
-    "DevOps-Learning/linux/Продвинутая работа в терминале/Команда grep - база.md",
+    "DevOps-Learning/linux/Продвинутая работа в терминале/SED база.md",
+    "DevOps-Learning/linux/Продвинутая работа в терминале/SED advanced.md",
+    "DevOps-Learning/linux/Untitled.md",
+    "DevOps-Learning/linux/Продвинутая работа в терминале/GREP - регулярные выражения.md",
     "Что сегодня изучил/2026-01-31.md",
+    "DevOps-Learning/linux/Продвинутая работа в терминале/Команда grep - база.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/История команд в Linux.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/История команд.md",
     "Что сегодня изучил/2026-01-30.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/GREP - регулярные выражения.md",
     "Что сегодня изучил/2026-01-25.md",
     "Что сегодня изучил/2026-01-27.md",
     "Что сегодня изучил/2026-01-29.md",
@@ -199,7 +202,6 @@
     "DevOps-Learning/linux/Продвинутая работа в терминале/Переменные окружения.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/Настройка окружения командной строки.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале",
-    "DevOps-Learning/linux/Untitled.md",
     "DevOps-Learning/linux/Основы командной строки/Архивация(.tar).md",
     "DevOps-Learning/linux/Текстовые редакторы/vim/Vim — продвинутая навигация.md",
     "DevOps-Learning/linux/Текстовые редакторы/vim/Vim - Визуальный режим.md",
