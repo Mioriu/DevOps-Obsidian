@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-02-12.md",
+                "file": "Что сегодня изучил/2026-02-14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-12"
+              "title": "2026-02-14"
             }
           }
         ]
@@ -186,10 +186,22 @@
   },
   "active": "538afd156b90f8fe",
   "lastOpenFiles": [
+    "Что сегодня изучил/2026-01-30.md",
+    "Что сегодня изучил/2026-01-29.md",
+    "Что сегодня изучил/2026-02-14.md",
+    "DevOps-Learning/linux/Управление процессами/Приоритеты процессов.md",
+    "Что сегодня изучил/2026-02-05 - 2026-02-06.md",
+    "DevOps-Learning/linux/Управление процессами/Load Average.md",
+    "DevOps-Learning/linux/Управление процессами/Сигналы в линукс.md",
+    "DevOps-Learning/linux/Управление процессами/Мониторинг процессов.md",
+    "DevOps-Learning/linux/Управление процессами/Состояния процессов.md",
+    "DevOps-Learning/linux/Untitled.md",
+    "DevOps-Learning/linux/Продвинутая работа в терминале/awk base.md",
+    "DevOps-Learning/linux/Продвинутая работа в терминале/awk advanced.md",
+    "Что сегодня изучил/2026-02-12.md",
     "DevOps-Learning/linux/Управление пакетами и ПО/Установка ПО из исходников.md",
     "DevOps-Learning/linux/Управление пакетами и ПО/Управление репозиториями.md",
     "DevOps-Learning/linux/Управление процессами/Процессы в Linux, основы.md",
-    "Что сегодня изучил/2026-02-12.md",
     "Что сегодня изучил/Untitled.md",
     "DevOps-Learning/linux/Управление процессами",
     "DevOps-Learning/linux/Управление пакетами и ПО/Пакетные менеджеры.md",
@@ -198,23 +210,11 @@
     "DevOps-Learning/linux/Управление пакетами и ПО",
     "Что сегодня изучил/2026-02-08.md",
     "DevOps-Learning/linux/Bash/Управляющие конструкции.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/awk base.md",
     "Что сегодня изучил/2026-02-07.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/Перенаправление ввода-вывода.md",
     "DevOps-Learning/linux/Bash/Bash база.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/sort.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/Сравнение файлов.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/awk advanced.md",
-    "Что сегодня изучил/2026-01-30.md",
-    "Что сегодня изучил/2026-01-29.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/SED advanced.md",
     "DevOps-Learning/linux/Bash",
-    "DevOps-Learning/linux/Untitled.md",
-    "Что сегодня изучил/2026-02-05 - 2026-02-06.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/SED база.md",
-    "Что сегодня изучил/2026-01-31.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/GREP - регулярные выражения.md",
-    "DevOps-Learning/linux/Продвинутая работа в терминале/Команда grep - база.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале",
     "Untitled",
     "DevOps-Learning/linux/Текстовые редакторы/vim",
