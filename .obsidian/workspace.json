@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-02-17.md",
+                "file": "Что сегодня изучил/2026-02-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-17"
+              "title": "2026-02-20"
             }
           }
         ]
@@ -186,9 +186,13 @@
   },
   "active": "538afd156b90f8fe",
   "lastOpenFiles": [
-    "DevOps-Learning/linux/Сеть в Linux/Основы сетевой модели tcp-ip.md",
     "Что сегодня изучил/2026-02-17.md",
+    "Что сегодня изучил/2026-02-20.md",
+    "DevOps-Learning/linux/Сеть в Linux/Инструменты диагностики сети - часть 1.md",
+    "DevOps-Learning/linux/Сеть в Linux/NetworkManager.md",
+    "DevOps-Learning/linux/Сеть в Linux/Конфигурация сетевых интерфейсов - расширенная настройка.md",
     "DevOps-Learning/linux/Сеть в Linux/Конфигурация сетевых интерфейсов-базовая настройка.md",
+    "DevOps-Learning/linux/Сеть в Linux/Основы сетевой модели tcp-ip.md",
     "DevOps-Learning/linux/Управление процессами/Анализ производительности процессов.md",
     "DevOps-Learning/linux/Сеть в Linux",
     "DevOps-Learning/linux/Сеть в Linux.md",
@@ -209,11 +213,7 @@
     "DevOps-Learning/linux/Продвинутая работа в терминале/awk base.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/awk advanced.md",
     "Что сегодня изучил/2026-02-12.md",
-    "DevOps-Learning/linux/Управление пакетами и ПО/Установка ПО из исходников.md",
-    "DevOps-Learning/linux/Управление пакетами и ПО/Управление репозиториями.md",
-    "DevOps-Learning/linux/Управление процессами/Процессы в Linux, основы.md",
     "DevOps-Learning/linux/Управление процессами",
-    "DevOps-Learning/linux/Управление пакетами и ПО/Пакетные менеджеры.md",
     "DevOps-Learning/linux/Управление пакетами и ПО",
     "DevOps-Learning/linux/Bash",
     "DevOps-Learning/linux/Продвинутая работа в терминале",
