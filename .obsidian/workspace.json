@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-02-24.md",
+                "file": "DevOps-Learning/linux/Сеть в Linux/Брандмауэр — современные инструменты.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-24"
+              "title": "Брандмауэр — современные инструменты"
             }
           },
           {
@@ -200,8 +200,14 @@
   },
   "active": "e9160f237b682ed6",
   "lastOpenFiles": [
-    "DevOps-Learning/linux/Сеть в Linux/Настройка ssh сервера.md",
+    "Что сегодня изучил/2026-02-26.md",
+    "DevOps-Learning/linux/Сеть в Linux/Брандмауэр и фильтрация пакетов — основы iptables.md",
+    "DevOps-Learning/linux/Сеть в Linux/Брандмауэр — современные инструменты.md",
+    "DevOps-Learning/linux/Сеть в Linux/DNS и резолвинг.md",
+    "DevOps-Learning/linux/Сеть в Linux/Передача файлов по сети — расширенные возможности.md",
+    "DevOps-Learning/linux/Сеть в Linux/Передача файлов по сети - база.md",
     "Что сегодня изучил/2026-02-24.md",
+    "DevOps-Learning/linux/Сеть в Linux/Настройка ssh сервера.md",
     "Что сегодня изучил/2026-02-23.md",
     "DevOps-Learning/linux/Продвинутая работа в терминале/Перенаправление ввода-вывода.md",
     "DevOps-Learning/linux/Bash/Управляющие конструкции.md",
@@ -221,12 +227,6 @@
     "Что сегодня изучил/2026-02-15.md",
     "DevOps-Learning/linux/Управление процессами/Systemd и управление сервисами.md",
     "Что сегодня изучил/2026-02-14.md",
-    "DevOps-Learning/linux/Управление процессами/Управление загрузкой (GRUB,initramfs).md",
-    "DevOps-Learning/linux/Управление процессами/Планирование задач (cron).md",
-    "DevOps-Learning/linux/Управление процессами/Ограничение ресурсов (cgroups).md",
-    "DevOps-Learning/linux/Управление процессами/Мониторинг процессов.md",
-    "Что сегодня изучил/2026-01-30.md",
-    "Что сегодня изучил/2026-01-29.md",
     "DevOps-Learning/linux/Управление процессами",
     "DevOps-Learning/linux/Управление пакетами и ПО",
     "DevOps-Learning/linux/Bash",
