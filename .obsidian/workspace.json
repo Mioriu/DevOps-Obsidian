@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-03-20.md",
+                "file": "Что сегодня изучил/2026-03-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-20"
+              "title": "2026-03-22"
             }
           }
         ]
@@ -195,10 +195,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "12762aa18ffbf000",
+  "active": "3da3b9e4a1d1abf0",
   "lastOpenFiles": [
-    "DevOps-Learning/linux/Диски и файловые системы/Управление логическими томами (LVM).md",
+    "DevOps-Learning/linux/Безопасность в Linux/Базовый аудит безопасности.md",
+    "Что сегодня изучил/2026-03-22.md",
+    "DevOps-Learning/linux/Безопасность в Linux/SSH-ключи и безопасный доступ.md",
+    "DevOps-Learning/linux/Безопасность в Linux/SELinux и AppArmor.md",
+    "DevOps-Learning/linux/Безопасность в Linux/sudo и разграничение прав.md",
+    "DevOps-Learning/linux/Безопасность в Linux/Без названия",
     "Что сегодня изучил/2026-03-20.md",
+    "DevOps-Learning/linux/Безопасность в Linux",
+    "DevOps-Learning/linux/Безопасность в Linux.md",
+    "DevOps-Learning/linux/Диски и файловые системы/Управление логическими томами (LVM).md",
     "Что сегодня изучил/2026-03-19.md",
     "DevOps-Learning/linux/Диски и файловые системы/Разделы - создание и управление.md",
     "DevOps-Learning/linux/Диски и файловые системы/Файловые системы и монтирование.md",
@@ -219,20 +227,12 @@
     "DevOps-Learning/linux/Сеть в Linux/Передача файлов по сети - база.md",
     "Что сегодня изучил/2026-02-26.md",
     "DevOps-Learning/linux/Сеть в Linux/Передача файлов по сети — расширенные возможности.md",
-    "DevOps-Learning/linux/Логирование/Логирование в Linux (rsyslog, journalctl).md",
-    "Что сегодня изучил/2026-03-01.md",
-    "DevOps-Learning/linux/Логирование/Ротация логов - logrotate.md",
-    "DevOps-Learning/linux/Основы командной строки/Архивация(.tar).md",
-    "DevOps-Learning/linux/Управление процессами/Приоритеты процессов.md",
-    "Что сегодня изучил/2026-01-25.md",
     "DevOps-Learning/linux/Логирование",
     "DevOps-Learning/linux/Сеть в Linux",
     "DevOps-Learning/linux/Управление процессами",
     "DevOps-Learning/linux/Управление пакетами и ПО",
     "DevOps-Learning/linux/Bash",
     "DevOps-Learning/linux/Продвинутая работа в терминале",
-    "Untitled",
-    "DevOps-Learning/linux/Текстовые редакторы/vim",
-    "DevOps-Learning/linux/Текстовые редакторы"
+    "Untitled"
   ]
 }
