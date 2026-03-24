@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-03-22.md",
+                "file": "Что сегодня изучил/2026-03-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-22"
+              "title": "2026-03-24"
             }
           }
         ]
@@ -195,10 +195,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3da3b9e4a1d1abf0",
+  "active": "12762aa18ffbf000",
   "lastOpenFiles": [
-    "DevOps-Learning/linux/Безопасность в Linux/Базовый аудит безопасности.md",
+    "DevOps-Learning/linux/Резервное копирование/Восстановление данных.md",
+    "DevOps-Learning/linux/Резервное копирование/Основы резервного копирования.md",
+    "DevOps-Learning/linux/Резервное копирование/Создание и восстановление снапшотов (LVM).md",
+    "Что сегодня изучил/2026-03-24.md",
+    "DevOps-Learning/GIT/Первоначальная настройка.md",
+    "DevOps-Learning/GIT",
     "Что сегодня изучил/2026-03-22.md",
+    "DevOps-Learning/linux/Резервное копирование",
+    "DevOps-Learning/linux/Резервное.md",
+    "DevOps-Learning/linux/Безопасность в Linux/Базовый аудит безопасности.md",
     "DevOps-Learning/linux/Безопасность в Linux/SSH-ключи и безопасный доступ.md",
     "DevOps-Learning/linux/Безопасность в Linux/SELinux и AppArmor.md",
     "DevOps-Learning/linux/Безопасность в Linux/sudo и разграничение прав.md",
@@ -221,18 +229,10 @@
     "DevOps-Learning/linux/Логирование/Продвинутый мониторинг системы.md",
     "Что сегодня изучил/2026-03-10.md",
     "Что сегодня изучил/2026-02-23.md",
-    "DevOps-Learning/linux/Логирование/Системный мониторинг.md",
-    "Что сегодня изучил/2026-02-22.md",
-    "DevOps-Learning/linux/Управление процессами/Анализ производительности процессов.md",
-    "DevOps-Learning/linux/Сеть в Linux/Передача файлов по сети - база.md",
-    "Что сегодня изучил/2026-02-26.md",
-    "DevOps-Learning/linux/Сеть в Linux/Передача файлов по сети — расширенные возможности.md",
     "DevOps-Learning/linux/Логирование",
     "DevOps-Learning/linux/Сеть в Linux",
     "DevOps-Learning/linux/Управление процессами",
     "DevOps-Learning/linux/Управление пакетами и ПО",
-    "DevOps-Learning/linux/Bash",
-    "DevOps-Learning/linux/Продвинутая работа в терминале",
-    "Untitled"
+    "DevOps-Learning/linux/Bash"
   ]
 }
