@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-03-27.md",
+                "file": "Что сегодня изучил/2026-03-28.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-27"
+              "title": "2026-03-28"
             }
           }
         ]
@@ -197,6 +197,9 @@
   },
   "active": "12762aa18ffbf000",
   "lastOpenFiles": [
+    "DevOps-Learning/GIT/Ветвление и слияние/Разрешения конфликтов.md",
+    "Что сегодня изучил/2026-03-28.md",
+    "DevOps-Learning/GIT/Ветвление и слияние/Слияние веток fast-forward и 3-way merge.md",
     "DevOps-Learning/GIT/Ветвление и слияние/Ветки - создание, переключение, удаление.md",
     "Что сегодня изучил/2026-03-27.md",
     "DevOps-Learning/GIT/Базовые операции/Игнорирование файлов (.gitignore и .gitkeep).md",
@@ -228,9 +231,6 @@
     "DevOps-Learning/linux/Безопасность в Linux/Без названия",
     "Что сегодня изучил/2026-03-20.md",
     "DevOps-Learning/linux/Безопасность в Linux",
-    "DevOps-Learning/linux/Безопасность в Linux.md",
-    "DevOps-Learning/linux/Диски и файловые системы/Управление логическими томами (LVM).md",
-    "Что сегодня изучил/2026-03-19.md",
     "Без названия.canvas",
     "DevOps-Learning/linux/Диски и файловые системы",
     "DevOps-Learning/linux/Логирование"
