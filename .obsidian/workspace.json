@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-03-28.md",
+                "file": "DevOps-Learning/GIT/Удаленные репозитории/Синхронизация push, pull, fetch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-28"
+              "title": "Синхронизация push, pull, fetch"
             }
           }
         ]
@@ -197,8 +197,11 @@
   },
   "active": "12762aa18ffbf000",
   "lastOpenFiles": [
-    "DevOps-Learning/GIT/Ветвление и слияние/Разрешения конфликтов.md",
+    "DevOps-Learning/GIT/Удаленные репозитории/Работа с remote clone, remote add.md",
+    "DevOps-Learning/GIT/Удаленные репозитории/Синхронизация push, pull, fetch.md",
     "Что сегодня изучил/2026-03-28.md",
+    "DevOps-Learning/GIT/Удаленные репозитории",
+    "DevOps-Learning/GIT/Ветвление и слияние/Разрешения конфликтов.md",
     "DevOps-Learning/GIT/Ветвление и слияние/Слияние веток fast-forward и 3-way merge.md",
     "DevOps-Learning/GIT/Ветвление и слияние/Ветки - создание, переключение, удаление.md",
     "Что сегодня изучил/2026-03-27.md",
@@ -227,12 +230,9 @@
     "DevOps-Learning/linux/Резервное.md",
     "DevOps-Learning/linux/Безопасность в Linux/Базовый аудит безопасности.md",
     "DevOps-Learning/linux/Безопасность в Linux/SSH-ключи и безопасный доступ.md",
-    "DevOps-Learning/linux/Безопасность в Linux/SELinux и AppArmor.md",
     "DevOps-Learning/linux/Безопасность в Linux/Без названия",
-    "Что сегодня изучил/2026-03-20.md",
     "DevOps-Learning/linux/Безопасность в Linux",
     "Без названия.canvas",
-    "DevOps-Learning/linux/Диски и файловые системы",
-    "DevOps-Learning/linux/Логирование"
+    "DevOps-Learning/linux/Диски и файловые системы"
   ]
 }
