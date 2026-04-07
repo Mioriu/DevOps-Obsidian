@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-04-02.md",
+                "file": "Что сегодня изучил/2026-04-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-02"
+              "title": "2026-04-07"
             }
           }
         ]
@@ -197,8 +197,13 @@
   },
   "active": "4b1937a7d03b51f6",
   "lastOpenFiles": [
-    "DevOps-Learning/GIT/Удаленные репозитории/Ветки в удаленных репозиториях.md",
+    "DevOps-Learning/GIT/Изменение истории/Интерактивный rebase - squash, reorder, edit.md",
+    "DevOps-Learning/GIT/Изменение истории/Rebase - линейная история.md",
+    "DevOps-Learning/GIT/Изменение истории/Amend и перезапись последнего коммита.md",
+    "Что сегодня изучил/2026-04-07.md",
     "Что сегодня изучил/2026-04-02.md",
+    "DevOps-Learning/GIT/Изменение истории",
+    "DevOps-Learning/GIT/Удаленные репозитории/Ветки в удаленных репозиториях.md",
     "Что сегодня изучил/2026-04-01.md",
     "DevOps-Learning/GIT/Удаленные репозитории/Работа с remote clone, remote add.md",
     "Что сегодня изучил/2026-03-28.md",
@@ -224,15 +229,10 @@
     "DevOps-Learning/GIT/Базовые операции",
     "DevOps-Learning/GIT/Основы гит/Что такое система контроля версий.md",
     "DevOps-Learning/GIT/Основы гит",
-    "DevOps-Learning/linux/Резервное копирование/Восстановление данных.md",
-    "DevOps-Learning/linux/Резервное копирование/Основы резервного копирования.md",
-    "DevOps-Learning/linux/Резервное копирование/Создание и восстановление снапшотов (LVM).md",
     "DevOps-Learning/GIT",
-    "Что сегодня изучил/2026-03-22.md",
     "DevOps-Learning/linux/Резервное копирование",
     "DevOps-Learning/linux/Безопасность в Linux/Без названия",
     "DevOps-Learning/linux/Безопасность в Linux",
-    "Без названия.canvas",
-    "DevOps-Learning/linux/Диски и файловые системы"
+    "Без названия.canvas"
   ]
 }
