@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4b1937a7d03b51f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevOps-Learning/GIT/Продвинутые инструменты/Поиск - log, grep, blame, bisect.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Поиск - log, grep, blame, bisect"
-            }
-          },
-          {
             "id": "d18fbceb8e9e54dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-04-23.md",
+                "file": "Что сегодня изучил/2026-04-24.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-23"
+              "title": "2026-04-24"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,9 +197,19 @@
   },
   "active": "d18fbceb8e9e54dc",
   "lastOpenFiles": [
-    "DevOps-Learning/GIT/Продвинутые возможности/Hooks - автоматизация процессов.md",
-    "Что сегодня изучил/2026-04-23.md",
+    "DevOps-Learning/GIT/Внутреннее устройство гит/Ссылки, индекс и pack-файлы.md",
+    "Что сегодня изучил/2026-04-24.md",
+    "DevOps-Learning/GIT/Внутреннее устройство гит/Объектная модель Git - как Git хранит данные.md",
+    "DevOps-Learning/GIT/Автоматизация и интеграция/CI CD интеграция - автоматизация workflow.md",
+    "DevOps-Learning/GIT/Внутреннее устройство гит",
+    "DevOps-Learning/GIT/Автоматизация и интеграция/Решение типовых проблем и troubleshooting.md",
     "DevOps-Learning/GIT/Продвинутые возможности/Git LFS - большие файлы.md",
+    "DevOps-Learning/GIT/Первоначальная настройка.md",
+    "DevOps-Learning/GIT/Автоматизация и интеграция",
+    "DevOps-Learning/GIT/Продвинутые возможности/Worktree - параллельная работа.md",
+    "DevOps-Learning/GIT/Без названия.md",
+    "Что сегодня изучил/2026-04-23.md",
+    "DevOps-Learning/GIT/Продвинутые возможности/Hooks - автоматизация процессов.md",
     "DevOps-Learning/GIT/Продвинутые возможности/Подмодули - работа с зависимостями.md",
     "Что сегодня изучил/2026-04-17.md",
     "DevOps-Learning/GIT/Продвинутые возможности",
@@ -224,7 +219,6 @@
     "DevOps-Learning/GIT/Работа в команде/Fork и Pull Request workflow.md",
     "Что сегодня изучил/2026-04-15.md",
     "Что сегодня изучил/2026-04-02.md",
-    "DevOps-Learning/GIT/Первоначальная настройка.md",
     "Что сегодня изучил/2026-01-30.md",
     "Что сегодня изучил/2026-01-31.md",
     "Что сегодня изучил/2026-01-29.md",
@@ -234,20 +228,11 @@
     "DevOps-Learning/GIT/Изменение истории/Cherry-pick - выборочное применение коммитов.md",
     "DevOps-Learning/GIT/Продвинутые инструменты/Stash - временное хранилище.md",
     "DevOps-Learning/GIT/Продвинутые инструменты/Reset vs Revert - отмена коммитов.md",
-    "DevOps-Learning/GIT/Продвинутые инструменты/Поиск - log, grep, blame, bisect.md",
-    "DevOps-Learning/GIT/Продвинутые инструменты/Reflog и восстановление потерянных данных.md",
-    "DevOps-Learning/GIT/Изменение истории/Интерактивный rebase - squash, reorder, edit.md",
-    "Что сегодня изучил/2026-04-11.md",
-    "Что сегодня изучил/2026-04-09.md",
     "DevOps-Learning/GIT/Продвинутые инструменты",
-    "Что сегодня изучил/2026-04-07.md",
-    "DevOps-Learning/linux/Диски и файловые системы/Управление логическими томами (LVM).md",
     "DevOps-Learning/GIT/Изменение истории",
     "DevOps-Learning/GIT/Удаленные репозитории",
     "DevOps-Learning/GIT/Ветвление и слияние",
     "Без названия.base",
-    "DevOps-Learning/GIT/Базовые операции",
-    "DevOps-Learning/GIT/Основы гит",
     "Без названия.canvas"
   ]
 }
