@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7d04f73eedb18102",
+        "id": "fc1b94160b6e1f81",
         "type": "tabs",
         "children": [
           {
-            "id": "d18fbceb8e9e54dc",
+            "id": "78b1e364c24da994",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Что сегодня изучил/2026-04-26.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-04-26"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -195,10 +191,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3da3b9e4a1d1abf0",
+  "active": "78b1e364c24da994",
   "lastOpenFiles": [
-    "DevOps-Learning/linux/Права и пользователи в Linux/Безопасность и автоматизация/Сценарии и best practices.md",
+    "DevOps-Learning/linux/Сеть в Linux/Брандмауэр и фильтрация пакетов — основы iptables.md",
+    "Что сегодня изучил/2026-04-28.md",
+    "DevOps-Learning/Docker/Знакомство с docker/Основные сущности Docker.md",
+    "DevOps-Learning/Docker/Знакомство с docker/Контейнеризация vs Виртуализация.md",
+    "DevOps-Learning/Docker/Знакомство с docker/Архитектура докер.md",
+    "DevOps-Learning/Docker/Знакомство с docker/Что такое Docker.md",
     "Что сегодня изучил/2026-04-26.md",
+    "DevOps-Learning/Docker/Знакомство с docker",
+    "DevOps-Learning/Docker",
+    "DevOps-Learning/linux/Права и пользователи в Linux/Безопасность и автоматизация/Сценарии и best practices.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Безопасность и автоматизация/Root и sudo.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права/Применение ACL.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права/SUID, SGID и Sticky bit.md",
@@ -224,15 +228,7 @@
     "DevOps-Learning/GIT/Продвинутые возможности/Git LFS - большие файлы.md",
     "DevOps-Learning/GIT/Первоначальная настройка.md",
     "DevOps-Learning/GIT/Автоматизация и интеграция",
-    "DevOps-Learning/GIT/Продвинутые возможности/Worktree - параллельная работа.md",
-    "DevOps-Learning/GIT/Без названия.md",
-    "Что сегодня изучил/2026-04-23.md",
-    "DevOps-Learning/GIT/Продвинутые возможности/Hooks - автоматизация процессов.md",
-    "DevOps-Learning/GIT/Продвинутые возможности/Подмодули - работа с зависимостями.md",
-    "Что сегодня изучил/2026-04-17.md",
     "DevOps-Learning/GIT/Продвинутые возможности",
-    "DevOps-Learning/GIT/Работа в команде/Теги и управление релизами",
-    "DevOps-Learning/GIT/Работа в команде",
     "Без названия.canvas"
   ]
 }
