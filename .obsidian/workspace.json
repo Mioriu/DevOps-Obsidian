@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-05-10.md",
+                "file": "Что сегодня изучил/2026-05-11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-10"
+              "title": "2026-05-11"
             }
           }
         ]
@@ -195,8 +195,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3da3b9e4a1d1abf0",
+  "active": "78b1e364c24da994",
   "lastOpenFiles": [
+    "DevOps-Learning/Docker/Сети/Траблшутинг сетей.md",
+    "Что сегодня изучил/2026-05-11.md",
+    "DevOps-Learning/Docker/Сети/DNS.md",
     "DevOps-Learning/Docker/Сети/Архитектура сетей.md",
     "Что сегодня изучил/2026-05-10.md",
     "DevOps-Learning/Docker/Образы/Типичные ошибки в Dockerfile.md",
@@ -222,11 +225,8 @@
     "DevOps-Learning/linux/Сеть в Linux/Брандмауэр и фильтрация пакетов — основы iptables.md",
     "DevOps-Learning/Docker/Знакомство с docker/Основные сущности Docker.md",
     "DevOps-Learning/Docker/Знакомство с docker/Контейнеризация vs Виртуализация.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Архитектура докер.md",
-    "Что сегодня изучил/2026-04-26.md",
     "DevOps-Learning/Docker/Знакомство с docker",
     "DevOps-Learning/Docker",
-    "DevOps-Learning/linux/Права и пользователи в Linux/Безопасность и автоматизация/Сценарии и best practices.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Безопасность и автоматизация",
     "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права",
     "DevOps-Learning/linux/Права и пользователи в Linux/Пользователи и группы",
