@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Практикум: Linux и Docker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            color: #cba6f7;
+            border-bottom: 1px solid #45475a;
+            padding-bottom: 5px;
+        }
+
+        .task {
+            background-color: #313244;
+            border-left: 5px solid #89b4fa;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .task h3 {
+            margin-top: 0;
+            color: #89b4fa;
+        }
+
+        details {
+            background-color: #45475a;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #a6e3a1;
+            transition: color 0.2s;
+        }
+
+        details summary:hover {
+            color: #f9e2af;
+        }
+
+        .solution {
+            border-left: 3px solid #a6e3a1;
+        }
+
+        .hints {
+            border-left: 3px solid #fab387;
+        }
+
+        code {
+            background-color: #11111b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #f38ba8;
+        }
+
+        pre {
+            background-color: #11111b;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #45475a;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: #cdd6f4;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        strong {
+            color: #f5c2e7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🐧 DevOps Оффлайн-Практикум</h1>
+    <p><strong>Темы:</strong> Linux, Docker, Траблшутинг, Bash-скриптинг.</p>
+    <p><strong>Окружение:</strong> Виртуальная машина с Ubuntu.</p>
+
+    <!-- Задача 1 -->
+    <div class="task">
+        <h3>Задача 1: Знакомство с правами и пользователями</h3>
+        <p>Создай пользователя <code>devops_app</code>. Создай директорию <code>/opt/myapp</code> и выдай права на неё
+            только этому пользователю и группе <code>developers</code> (которую тоже нужно создать). Проверь, что root
+            по-прежнему может зайти в папку, а твой основной пользователь (без прав) — нет.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Используй <code>useradd</code> и <code>groupadd</code> с флагом <code>-m</code> или без, в
+                    зависимости от нужного тебе профиля.</li>
+                <li>Для изменения владельца: <code>chown</code>.</li>
+                <li>Для прав: <code>chmod 770</code> (владелец и группа).</li>
+                <li>Проверить можно командой <code>su</code> или <code>sudo -u</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Создаём группу
+sudo groupadd developers
+
+# 2. Создаём пользователя и добавляем в группу
+sudo useradd -m -G developers devops_app
+
+# 3. Создаём директорию
+sudo mkdir -p /opt/myapp
+
+# 4. Меняем владельца и группу
+sudo chown devops_app:developers /opt/myapp
+
+# 5. Ставим права (чтение/запись/вход только для владельца и группы)
+sudo chmod 770 /opt/myapp
+
+# 6. Проверка
+# root может всё:
+sudo ls /opt/myapp
+# Текущий юзер (если не в группе) - отказ:
+ls /opt/myapp  # выдаст Permission denied
+# Добавь себя в группу, чтобы проверить доступ:
+sudo usermod -aG developers $USER
+# (потребуется перелогин)
+# Заходим под devops_app:
+sudo -u devops_app ls /opt/myapp
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 2 -->
+    <div class="task">
+        <h3>Задача 2: Поиск "убийцы" места на диске</h3>
+        <p>Твой диск <code>/</code> заполнен на 95%. Найди топ-5 самых больших файлов в системе и определи, какой
+            процесс прямо сейчас пишет больше всего данных на диск.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Используй <code>du</code> в связке с <code>sort</code> и <code>head</code>.</li>
+                <li>Начинай поиск с корня, но исключай <code>/proc</code> и виртуальные ФС.</li>
+                <li>Чтобы найти процесс-писатель: <code>iotop</code> (если установлен) или <code>lsof</code> +
+                    <code>find</code>.
+                </li>
+                <li>В крайнем случае смотри в <code>/proc</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <p><strong>Поиск больших файлов:</strong></p>
+            <pre><code>sudo find / -type f -size +100M -exec ls -lh {} \; 2>/dev/null | awk '{print $5, $NF}' | sort -hr | head -5
+# Или через du (поиск больших директорий):
+sudo du -ahx / 2>/dev/null | sort -rh | head -10
+# x - оставаться в одной файловой системе
+</code></pre>
+            <p><strong>Поиск активного писателя:</strong></p>
+            <pre><code># Вариант А: Использовать iotop (нужен пакет iotop)
+sudo iotop -oP
+
+# Вариант Б: Через /proc без доп. пакетов
+for pid in /proc/[0-9]*; do
+    wbytes=$(awk '/write_bytes/ {print $2}' $pid/io 2>/dev/null)
+    if [ -n "$wbytes" ] && [ "$wbytes" -gt 0 ]; then
+        name=$(cat $pid/comm)
+        echo "$wbytes bytes - PID: $(basename $pid) ($name)"
+    fi
+done | sort -rn | head -5
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 3 -->
+    <div class="task">
+        <h3>Задача 3: Docker-песочница</h3>
+        <p>Запусти контейнер с именем <code>my-nginx</code> на основе <code>nginx:alpine</code>. Сделай так, чтобы его
+            стандартная страница приветствия была доступна по адресу <code>http://localhost:8080</code>. Убедись, что
+            контейнер автоматически перезапускается при падении и стартует вместе с демоном Docker.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Флаг для проброса порта: <code>-p 8080:80</code>.</li>
+                <li>Режим перезапуска: <code>--restart unless-stopped</code> или <code>always</code>.</li>
+                <li>Имя задаётся через <code>--name</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code>docker run -d \
+  --name my-nginx \
+  -p 8080:80 \
+  --restart always \
+  nginx:alpine
+
+# Проверка:
+docker ps
+curl http://localhost:8080
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 4 -->
+    <div class="task">
+        <h3>Задача 4: Bash-скриптинг и анализ логов</h3>
+        <p>Напиши Bash-скрипт <code>analyze_log.sh</code>, который принимает путь к access-логу Nginx (обычный текстовый
+            формат) и выводит:<br>
+            1) Топ-5 IP по количеству запросов.<br>
+            2) Топ-5 эндпоинтов (URL).<br>
+            3) Количество ошибок (коды ответа 4xx и 5xx).</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Используй <code>awk</code> для разбора колонок. IP — обычно первое поле, URL — седьмое, код —
+                    девятое.</li>
+                <li>Формат combined лога: <code>$remote_addr - ... "METHOD /url HTTP/1.1" $status ...</code></li>
+                <li><code>sort | uniq -c | sort -rn | head -5</code> — твои лучшие друзья.</li>
+                <li>Не забудь сделать скрипт исполняемым.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code>#!/bin/bash
+LOGFILE=$1
+
+if [ -z "$LOGFILE" ]; then
+    echo "Usage: $0 /path/to/access.log"
+    exit 1
+fi
+
+echo "=== Top 5 IPs ==="
+awk '{print $1}' $LOGFILE | sort | uniq -c | sort -rn | head -5
+
+echo -e "\n=== Top 5 Endpoints ==="
+awk '{print $7}' $LOGFILE | sort | uniq -c | sort -rn | head -5
+
+echo -e "\n=== Error Count (4xx/5xx) ==="
+awk '{print $9}' $LOGFILE | grep -E '^[45][0-9]{2}$' | wc -l
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 5 -->
+    <div class="task">
+        <h3>Задача 5: Оживление сервиса</h3>
+        <p>Ты заходишь на сервер и видишь, что <code>systemctl status nginx</code> показывает <code>failed</code>. Ты не
+            можешь просто так переустанавливать пакет. Выясни причину падения и исправь её. (Подсказка: порт 80 уже
+            занят каким-то левым процессом).</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Смотри полный лог: <code>journalctl -u nginx -n 50 --no-pager</code>.</li>
+                <li>Ошибка: <code>bind() to 0.0.0.0:80 failed (98: Address already in use)</code>.</li>
+                <li>Найди процесс, слушающий порт: <code>sudo ss -tulpn | grep :80</code>.</li>
+                <li>Если это левый скрипт на Python, убей его через <code>kill</code> и запусти Nginx.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Смотрим ошибку
+sudo journalctl -u nginx --no-pager -n 20
+# Видим: "bind() failed (98: Address already in use)"
+
+# 2. Ищем, кто висит на порту 80
+sudo ss -tulpn | grep :80
+# или
+sudo lsof -i :80
+# Видим PID, например 12345, команда python3
+
+# 3. Убиваем процесс
+sudo kill 12345
+# (если не помогает: kill -9 12345)
+
+# 4. Запускаем Nginx
+sudo systemctl start nginx
+sudo systemctl status nginx
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 6 -->
+    <div class="task">
+        <h3>Задача 6: Docker-сеть и дебаг</h3>
+        <p>Запусти два контейнера: один с <code>redis:alpine</code> (имя <code>my-redis</code>), другой с
+            <code>alpine</code> (имя <code>client</code>) в одной кастомной сети <code>my-net</code>. Из контейнера
+            <code>client</code> подключись к Redis через <code>redis-cli</code> (его нет в alpine, придётся установить)
+            и запиши ключ <code>hello world</code>.
+        </p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Создай сеть: <code>docker network create my-net</code>.</li>
+                <li>Запусти контейнеры с флагом <code>--network my-net</code>.</li>
+                <li>В Alpine для установки: <code>apk add redis</code>.</li>
+                <li>Подключайся к Redis по имени контейнера: <code>redis-cli -h my-redis</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Создаём сеть
+docker network create my-net
+
+# 2. Redis
+docker run -d --name my-redis --network my-net redis:alpine
+
+# 3. Клиент (интерактивно)
+docker run -it --name client --network my-net alpine sh
+
+# Внутри контейнера client:
+apk update && apk add redis
+redis-cli -h my-redis
+# Внутри redis-cli:
+SET hello world
+GET hello
+exit
+exit
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 7 -->
+    <div class="task">
+        <h3>Задача 7: Поиск скрытого процесса (Продвинутый Linux)</h3>
+        <p>Говорят, на машине завёлся майнер, который прячется от команды <code>top</code> (подменяет имя). Используя
+            файловую систему <code>/proc</code>, найди процесс, который больше всего потребляет CPU в данный момент, но
+            в <code>top</code> выглядит безобидно.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li><code>top</code> и <code>ps</code> читают <code>/proc/[pid]/stat</code> и <code>status</code>.
+                    Злоумышленник может менять <code>argv[0]</code>, но не скроет сведения ядра.</li>
+                <li>Посмотри на содержимое <code>/proc/[pid]/exe</code> — куда ведёт симлинк.</li>
+                <li>Сравни <code>/proc/[pid]/comm</code> с командой в <code>ps aux</code>.</li>
+                <li>Можно скриптом пройтись по всем PID и вытащить те, где <code>/proc/[pid]/stat</code> показывает
+                    высокое значение <code>utime + stime</code> (14 и 15 поля).</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># Ручная проверка подозрительного PID (допустим, нашли его через top, но имя странное)
+PID=12345
+ls -l /proc/$PID/exe
+cat /proc/$PID/comm
+# Если exe указывает на /tmp/.hidden/miner, а comm говорит "bash" - вот он.
+
+# Скрипт для поиска жирных процессов по CPU Usage (тяжело без доп утилит, но можно через /proc/stat):
+# Сравниваем /proc/[pid]/stat за интервал.
+# Упрощённо: ищем процессы, у которых путь запуска подозрительный:
+for pid in /proc/[0-9]*; do
+    exe=$(readlink $pid/exe 2>/dev/null)
+    comm=$(cat $pid/comm 2>/dev/null)
+    if [[ "$exe" == /tmp/* ]] || [[ "$exe" == /dev/shm/* ]]; then
+        echo "Suspicious: PID=$(basename $pid) Comm=$comm Exe=$exe"
+    fi
+done
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 8 -->
+    <div class="task">
+        <h3>Задача 8: Многоконтейнерное приложение (Docker Compose руками)</h3>
+        <p>Docker Compose отключен (оффлайн без интернета), а тебе нужно собрать связку: Python-приложение (или
+            busybox), которое раз в 5 секунд пишет текущую дату и счётчик в файл, а Nginx этот файл отдаёт как статику.
+            Реализуй это на чистом Docker, разделив общий том.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Создай том: <code>docker volume create shared-data</code>.</li>
+                <li>Первый контейнер: <code>bash</code> в цикле
+                    <code>while true; do date >> /data/index.html; sleep 5; done</code>.
+                </li>
+                <li>Второй контейнер: nginx, который смотрит в ту же папку (<code>/usr/share/nginx/html</code>).</li>
+                <li>Не забудь про <code>-v shared-data:/data</code> и про маппинг в nginx.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Том
+docker volume create shared-data
+
+# 2. Генератор контента (писатель)
+docker run -d --name writer \
+  -v shared-data:/data \
+  busybox sh -c "while true; do echo \$(date) > /data/index.html; sleep 5; done"
+
+# 3. Nginx (читатель)
+docker run -d --name web \
+  -p 8081:80 \
+  -v shared-data:/usr/share/nginx/html:ro \
+  nginx:alpine
+
+# Проверка:
+curl http://localhost:8081
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 9 -->
+    <div class="task">
+        <h3>Задача 9: Бекап и архивация (ротация логов)</h3>
+        <p>Напиши Bash-скрипт, который архивирует директорию <code>/var/log/myapp</code> в <code>tar.gz</code>, добавляя
+            к имени текущую дату, и удаляет архивы старше 7 дней из папки <code>/backups</code>. Добавь скрипт в cron на
+            выполнение каждый день в 3 часа ночи.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Формат даты: <code>date +%Y%m%d</code>.</li>
+                <li>Для поиска и удаления старых файлов: <code>find /backups -name "*.tar.gz" -mtime +7 -delete</code>.
+                </li>
+                <li>Cron на системном уровне: положи скрипт в <code>/etc/cron.daily/</code> или добавь запись в
+                    <code>/etc/crontab</code>.
+                </li>
+                <li>Пользовательский cron: <code>crontab -e</code> -> <code>0 3 * * * /path/to/script.sh</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code>#!/bin/bash
+# /opt/scripts/backup-logs.sh
+BACKUP_DIR="/backups"
+SRC="/var/log/myapp"
+DATE=$(date +%Y%m%d)
+
+mkdir -p $BACKUP_DIR
+tar -czf $BACKUP_DIR/myapp-$DATE.tar.gz $SRC
+
+# Удаление старее 7 дней
+find $BACKUP_DIR -name "*.tar.gz" -mtime +7 -delete
+
+# Cron (пользовательский):
+# crontab -e
+# 0 3 * * * /bin/bash /opt/scripts/backup-logs.sh
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 10 -->
+    <div class="task">
+        <h3>Задача 10: Dockerfile и слои</h3>
+        <p>Напиши Dockerfile для простого Flask-приложения (или просто скрипта на Python, выводящего "Hello World" на
+            порт 5000). Требования:<br>
+            1) Использовать <code>python:3.10-slim</code>.<br>
+            2) Скопировать код.<br>
+            3) Установить Flask (если есть зависимость).<br>
+            4) Оптимизировать слои, чтобы кешировалась установка пакетов.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Сначала скопируй <code>requirements.txt</code>, потом <code>pip install</code>, потом код.</li>
+                <li>Используй <code>EXPOSE 5000</code> и <code>CMD</code>.</li>
+                <li>Для тренировки Flask не обязателен, хватит <code>python -m http.server 5000</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <p><strong>app.py</strong></p>
+            <pre><code>from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello():
+    return "Hello DevOps World!"
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+</code></pre>
+            <p><strong>Dockerfile</strong></p>
+            <pre><code>FROM python:3.10-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py .
+EXPOSE 5000
+CMD ["python", "app.py"]
+</code></pre>
+            <p><strong>requirements.txt</strong></p>
+            <pre><code>Flask==2.3.2
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 11 -->
+    <div class="task">
+        <h3>Задача 11: Жёсткие и символьные ссылки</h3>
+        <p>Объясни (и проверь на практике) разницу между Hard Link и Symbolic Link. Создай файл
+            <code>original.txt</code> с текстом "data". Сделай hard link <code>hard.txt</code> и symlink
+            <code>sym.txt</code>. Удали оригинал. Что происходит с каждым типом ссылки? Проверь inodes через
+            <code>stat</code>.
+        </p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Hard link: <code>ln original.txt hard.txt</code>.</li>
+                <li>Symlink: <code>ln -s original.txt sym.txt</code>.</li>
+                <li>Ключевая проверка: <code>ls -li</code> покажет одинаковый inode у оригинала и hard link.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code>echo "data" > original.txt
+ln original.txt hard.txt
+ln -s original.txt sym.txt
+
+ls -li
+# hard.txt имеет ТОТ ЖЕ inode, что и original.txt.
+# sym.txt имеет другой inode и размер (путь).
+
+cat hard.txt # data
+cat sym.txt  # data
+
+rm original.txt
+
+cat hard.txt # data (данные живы!)
+cat sym.txt  # cat: sym.txt: No such file or directory (битая ссылка)
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 12 -->
+    <div class="task">
+        <h3>Задача 12: Инцидент "Бесконечные рестарты"</h3>
+        <p>Ты запустил контейнер с MySQL вот так:<br>
+            <code>docker run -d --name db -e MYSQL_ROOT_PASSWORD=pass mysql:8</code><br>
+            Через минуту <code>docker ps</code> его не показывает, а <code>docker ps -a</code> показывает статус
+            <code>Exited (1)</code>. Ты запускаешь его снова, он опять падает. Узнай точную причину падения и исправь,
+            чтобы контейнер работал стабильно.
+        </p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Смотри логи упавшего контейнера: <code>docker logs db</code>.</li>
+                <li>Ищи строки ошибок. Часто это <code>[ERROR] InnoDB: Your database may be corrupt</code> или проблема
+                    с правами, или параметром, который требует новую версию.</li>
+                <li>Принудительное восстановление: добавь в команду запуска <code>--innodb-force-recovery=1</code> (как
+                    аргумент к mysqld).</li>
+                <li>Самое простое — удалить том/директорию с данными и начать чисто (<code>docker rm db</code> и
+                    <code>docker volume prune</code>).
+                </li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Смотрим причину
+docker logs db
+# Видим ошибку: [ERROR] [MY-013236] [Server] The designated data directory /var/lib/mysql/ is unusable.
+# или похожую. Вероятно, повреждение данных.
+
+# 2. Чиним (чистый старт)
+docker stop db
+docker rm db
+# Удаляем том (осторожно! Это удалит все данные)
+docker volume ls | grep mysql
+docker volume rm <volume_name>
+
+# 3. Запускаем заново
+docker run -d --name db -e MYSQL_ROOT_PASSWORD=pass mysql:8
+# Теперь работает.
+</code></pre>
+        </details>
+    </div>
+    <!-- Задача 13 -->
+    <div class="task">
+        <h3>Задача 13: Развертывание статического сайта с Nginx</h3>
+        <p>У тебя есть готовая HTML-страница <code>index.html</code>. Настрой полноценный сайт на Nginx в Ubuntu: создай
+            конфигурационный файл виртуального хоста <code>mysite.local</code>, укажи корневую директорию
+            <code>/var/www/mysite</code>, настрой логи отдельно для этого сайта (access и error). Проверь конфигурацию и
+            перезагрузи Nginx.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Конфиги виртуальных хостов лежат в <code>/etc/nginx/sites-available/</code>.</li>
+                <li>Активируются через симлинк в <code>/etc/nginx/sites-enabled/</code>.</li>
+                <li>Для проверки синтаксиса используй <code>nginx -t</code>.</li>
+                <li>Не забудь про <code>server_name</code> и директивы <code>access_log</code>, <code>error_log</code>.
+                </li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Создаём директорию и простую страницу
+sudo mkdir -p /var/www/mysite
+echo "&lt;h1&gt;Welcome to MySite!&lt;/h1&gt;" | sudo tee /var/www/mysite/index.html
+sudo chown -R www-data:www-data /var/www/mysite
+
+# 2. Создаём конфиг
+sudo nano /etc/nginx/sites-available/mysite.local
+</code></pre>
+            <p><strong>Содержимое конфига:</strong></p>
+            <pre><code>server {
+    listen 80;
+    server_name mysite.local www.mysite.local;
+
+    root /var/www/mysite;
+    index index.html;
+
+    access_log /var/log/nginx/mysite_access.log;
+    error_log /var/log/nginx/mysite_error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+</code></pre>
+            <pre><code># 3. Активируем сайт
+sudo ln -s /etc/nginx/sites-available/mysite.local /etc/nginx/sites-enabled/
+
+# 4. Проверяем и перезагружаем
+sudo nginx -t
+sudo systemctl reload nginx
+
+# 5. Тестируем локально
+curl -H "Host: mysite.local" http://localhost
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 14 -->
+    <div class="task">
+        <h3>Задача 14: Нехватка inode на диске</h3>
+        <p>Команда <code>df -h</code> показывает, что на разделе <code>/var</code> занято всего 30% места, но новые
+            файлы создавать невозможно — ошибка <code>No space left on device</code>. Выясни причину, найди директорию с
+            миллионом мелких файлов и очисти её.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Проверь количество использованных inode: <code>df -i</code>.</li>
+                <li>Найди директории с огромным количеством файлов:
+                    <code>find /var -xdev -type d -exec sh -c 'echo "$(ls -1 "$1" | wc -l) $1"' _ {} \;</code> или через
+                    <code>find</code> с <code>-printf</code> и <code>sort</code>.</li>
+                <li>Частая причина — кеш-файлы сессий PHP или временные файлы.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Диагностика
+df -i
+# Видим IUse% 100% на /var
+
+# 2. Поиск директории-виновника
+sudo find /var -xdev -type d -size +100k 2>/dev/null
+# Более точный способ — подсчёт файлов:
+for dir in /var/*; do
+    count=$(sudo find "$dir" -type f | wc -l)
+    echo "$count $dir"
+done | sort -rn | head -10
+
+# 3. Допустим, нашли /var/spool/postfix/maildrop с кучей файлов
+ls /var/spool/postfix/maildrop | wc -l
+
+# 4. Очистка (осторожно!)
+sudo find /var/spool/postfix/maildrop -type f -delete
+# Или массово удалить через xargs
+# Проверяем:
+df -i
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 15 -->
+    <div class="task">
+        <h3>Задача 15: Отладка медленного запуска контейнера</h3>
+        <p>Ты запускаешь Docker-контейнер, и он висит в статусе <code>health: starting</code> или <code>starting</code>
+            целую минуту, прежде чем стать <code>healthy</code>. Нужно понять, что происходит внутри контейнера в
+            процессе его запуска, не прерывая его.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li><code>docker logs -f container_name</code> покажет вывод STDOUT/STDERR.</li>
+                <li><code>docker inspect container_name | jq '.[0].State.Health'</code> покажет статус healthcheck.</li>
+                <li>Чтобы посмотреть процессы внутри запущенного контейнера: <code>docker top container_name</code>.
+                </li>
+                <li>Можно "зайти" внутрь запущенного контейнера: <code>docker exec -it container_name sh</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Смотрим логи в реальном времени
+docker logs -f my-app
+
+# 2. Проверяем healthcheck статус
+docker inspect my-app | grep -A 10 Health
+# Видим "FailingStreak": 5 или долгий "StartPeriod"
+
+# 3. Заходим внутрь и смотрим процессы
+docker exec -it my-app sh
+# Внутри:
+ps aux
+top
+# Проверяем, может, скрипт инициализации ждёт базу данных,
+# или curl до внешнего сервиса завис из-за недоступности.
+
+# 4. Смотрим логи системы внутри контейнера (если есть)
+docker exec my-app cat /var/log/app.log
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 16 -->
+    <div class="task">
+        <h3>Задача 16: Безопасная настройка SSH</h3>
+        <p>Настрой SSH-сервер на Ubuntu так, чтобы:<br>
+            1) Запретить вход под root.<br>
+            2) Разрешить вход только пользователю <code>devops</code> (создай его, если нет).<br>
+            3) Сменить стандартный порт с 22 на 2222.<br>
+            4) Отключить аутентификацию по паролю, оставить только по ключам.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Конфиг SSH: <code>/etc/ssh/sshd_config</code>.</li>
+                <li>Директива: <code>PermitRootLogin no</code>.</li>
+                <li>Директива для пользователей: <code>AllowUsers devops</code>.</li>
+                <li>Директива: <code>PasswordAuthentication no</code> и <code>PubkeyAuthentication yes</code>.</li>
+                <li>Не забудь перезапустить службу: <code>sudo systemctl restart sshd</code>.</li>
+                <li>Перед отключением пароля убедись, что ключ добавлен в <code>~/.ssh/authorized_keys</code> для
+                    пользователя devops.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Создаём пользователя и настраиваем ключи
+sudo useradd -m -s /bin/bash devops
+sudo passwd devops
+sudo su - devops
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+# Копируем свой публичный ключ:
+echo "ssh-rsa AAAAB3... user@host" >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+exit
+
+# 2. Правим конфиг SSH
+sudo nano /etc/ssh/sshd_config
+</code></pre>
+            <p><strong>Изменяемые/добавляемые строки:</strong></p>
+            <pre><code>Port 2222
+PermitRootLogin no
+AllowUsers devops
+PubkeyAuthentication yes
+PasswordAuthentication no
+</code></pre>
+            <pre><code># 3. Проверяем конфиг и перезагружаем
+sudo sshd -t
+sudo systemctl restart sshd
+
+# 4. Проверяем (с другого терминала, не закрывая текущий!)
+ssh -p 2222 devops@localhost
+# Должен пустить по ключу без пароля.
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 17 -->
+    <div class="task">
+        <h3>Задача 17: Перехват трафика контейнера</h3>
+        <p>У тебя есть веб-приложение в контейнере, которое ходит во внешний мир через HTTP. Перехвати и проанализируй
+            весь HTTP-трафик, исходящий из этого контейнера, с помощью <code>tcpdump</code> на хосте.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Найди сетевой интерфейс контейнера: <code>docker inspect container | grep -i network</code> или
+                    <code>ip link show</code>.</li>
+                <li>Обычно это <code>veth...</code> или мост <code>docker0</code>.</li>
+                <li>Можно слушать весь трафик на интерфейсе <code>docker0</code>.</li>
+                <li><code>tcpdump -i docker0 -A port 80</code> покажет текстовое содержимое пакетов.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Смотрим сетевые настройки контейнера
+docker inspect my-container --format='{{json .NetworkSettings.Networks}}' | python3 -m json.tool
+# Или проще — найти ID контейнера в сети:
+docker ps
+# Допустим, контейнер называется web-app
+
+# 2. Запускаем tcpdump на интерфейсе docker0
+sudo tcpdump -i docker0 -A -s 0 'tcp port 80 and host <ip-контейнера>'
+
+# 3. Если хотим писать в файл для анализа:
+sudo tcpdump -i docker0 -w /tmp/container_traffic.pcap 'tcp port 80'
+# Потом прочитать:
+tcpdump -r /tmp/container_traffic.pcap -A
+
+# 4. Альтернативно, можно прямо из пространства имён контейнера:
+# (требует nsenter или docker exec с tcpdump внутри)
+docker exec -it web-app sh -c "apk add tcpdump && tcpdump -i eth0 -A port 80"
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 18 -->
+    <div class="task">
+        <h3>Задача 18: Управление systemd-сервисами</h3>
+        <p>Создай собственный systemd-сервис, который будет запускать простой HTTP-сервер на Python
+            (<code>python3 -m http.server 9000</code>) из директории <code>/srv/files</code>. Сервис должен запускаться
+            от непривилегированного пользователя <code>appuser</code>, автоматически стартовать при загрузке и
+            перезапускаться при падении.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Создай unit-файл в <code>/etc/systemd/system/pyserver.service</code>.</li>
+                <li>Используй секции <code>[Unit]</code>, <code>[Service]</code>, <code>[Install]</code>.</li>
+                <li>Директивы: <code>User=</code>, <code>WorkingDirectory=</code>, <code>ExecStart=</code>,
+                    <code>Restart=always</code>, <code>WantedBy=multi-user.target</code>.</li>
+                <li>После создания: <code>systemctl daemon-reload</code>, <code>systemctl enable pyserver</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Создаём пользователя и директорию
+sudo useradd -r -s /usr/sbin/nologin appuser
+sudo mkdir -p /srv/files
+sudo chown appuser:appuser /srv/files
+echo "Hello from service" | sudo tee /srv/files/index.html
+
+# 2. Создаём unit-файл
+sudo nano /etc/systemd/system/pyserver.service
+</code></pre>
+            <p><strong>Содержимое:</strong></p>
+            <pre><code>[Unit]
+Description=Simple Python HTTP Server
+After=network.target
+
+[Service]
+Type=simple
+User=appuser
+Group=appuser
+WorkingDirectory=/srv/files
+ExecStart=/usr/bin/python3 -m http.server 9000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+            <pre><code># 3. Активируем и запускаем
+sudo systemctl daemon-reload
+sudo systemctl enable pyserver
+sudo systemctl start pyserver
+
+# 4. Проверяем
+sudo systemctl status pyserver
+curl http://localhost:9000
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 19 -->
+    <div class="task">
+        <h3>Задача 19: Сборка Docker-образа с нуля из scratch</h3>
+        <p>Скомпилируй простую программу на C ("Hello World"), которая выводит строку в STDOUT, и упакуй её в
+            минимальный Docker-образ на основе <code>scratch</code>. Образ должен быть статически скомпилирован и весить
+            минимально возможное количество мегабайт.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Для статической компиляции в gcc: <code>gcc -static -o hello hello.c</code>.</li>
+                <li>Многоэтапная сборка (multi-stage build): первый этап — компиляция в <code>gcc:alpine</code>, второй
+                    — копирование бинарника в <code>scratch</code>.</li>
+                <li>В <code>scratch</code> нет никаких библиотек, поэтому бинарник обязан быть статическим.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <p><strong>hello.c</strong></p>
+            <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello from scratch!\n");
+    return 0;
+}
+</code></pre>
+            <p><strong>Dockerfile</strong></p>
+            <pre><code># Этап 1: Компиляция
+FROM gcc:alpine AS builder
+COPY hello.c /src/
+WORKDIR /src
+RUN gcc -static -o hello hello.c
+
+# Этап 2: Финальный образ
+FROM scratch
+COPY --from=builder /src/hello /hello
+CMD ["/hello"]
+</code></pre>
+            <pre><code># Сборка и проверка размера
+docker build -t hello-scratch .
+docker images hello-scratch
+# Размер будет около 50-100 КБ (размер самого бинарника)
+docker run --rm hello-scratch
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 20 -->
+    <div class="task">
+        <h3>Задача 20: Восстановление удалённого файла (по файловому дескриптору)</h3>
+        <p>Кто-то случайно удалил лог-файл <code>/var/log/critical.log</code>, который всё ещё пишется активным
+            процессом. Место на диске продолжает уменьшаться (процесс держит дескриптор). Восстанови содержимое файла и
+            освободи место на диске без перезапуска процесса.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Найди процесс, который держит удалённый файл: <code>lsof | grep deleted</code>.</li>
+                <li>У удалённого файла в <code>/proc/[pid]/fd/</code> есть симлинк с пометкой <code>(deleted)</code>.
+                </li>
+                <li>Скопируй данные из файлового дескриптора: <code>cat /proc/[pid]/fd/[number] > /recovered.log</code>.
+                </li>
+                <li>Чтобы освободить место: <code>echo > /proc/[pid]/fd/[number]</code> (обрезать файл) или
+                    <code>kill</code>, если процесс можно перезапустить.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Ищем процесс с удалённым файлом
+sudo lsof | grep deleted
+# Находим процесс python3 с PID 5678 и fd номером 3
+
+# 2. Проверяем
+ls -l /proc/5678/fd/3
+# lrwx------ 1 user user 64 ... 3 -> /var/log/critical.log (deleted)
+
+# 3. Восстанавливаем содержимое
+sudo cat /proc/5678/fd/3 > /tmp/critical_recovered.log
+
+# 4. Освобождаем место (обрезаем файл через дескриптор)
+sudo truncate -s 0 /proc/5678/fd/3
+# Или:
+echo -n | sudo tee /proc/5678/fd/3
+
+# Проверяем df -h — место должно освободиться.
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 21 -->
+    <div class="task">
+        <h3>Задача 21: Docker-образ с переменными окружения</h3>
+        <p>Создай Docker-образ на основе <code>alpine</code>, который при запуске выводит приветствие, взятое из
+            переменной окружения <code>GREETING</code> (со значением по умолчанию "Hello"). Проверь работу с разными
+            значениями переменной.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Используй <code>ENV</code> в Dockerfile для значения по умолчанию.</li>
+                <li>Для скрипта внутри контейнера: <code>echo ${GREETING:-Hello}</code> (bash-синтаксис значения по
+                    умолчанию).</li>
+                <li>В shell-скрипте alpine используй <code>#!/bin/sh</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <p><strong>entrypoint.sh</strong></p>
+            <pre><code>#!/bin/sh
+echo "${GREETING:-Hello}, DevOps!"
+</code></pre>
+            <p><strong>Dockerfile</strong></p>
+            <pre><code>FROM alpine:latest
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENV GREETING=Hello
+ENTRYPOINT ["/entrypoint.sh"]
+</code></pre>
+            <pre><code># Сборка и тестирование
+docker build -t greeting-app .
+docker run --rm greeting-app
+# Вывод: Hello, DevOps!
+
+docker run --rm -e GREETING="Hola" greeting-app
+# Вывод: Hola, DevOps!
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 22 -->
+    <div class="task">
+        <h3>Задача 22: Лимитирование ресурсов контейнера</h3>
+        <p>Запусти стресс-тест контейнер (например, <code>polinux/stress</code> или busybox с <code>dd</code>), но
+            ограничь его потребление: максимум 256 МБ оперативной памяти и 0.5 ядра CPU. Докажи, что лимиты работают, с
+            помощью <code>docker stats</code>.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Память: <code>--memory=256m</code>.</li>
+                <li>CPU: <code>--cpus=0.5</code>.</li>
+                <li>Для генерации нагрузки можно использовать <code>busybox sh -c "dd if=/dev/zero of=/dev/null"</code>.
+                </li>
+                <li>Открывай второй терминал для <code>docker stats</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># Терминал 1: Запускаем контейнер с лимитами
+docker run -d --name limited-stress \
+  --memory=256m \
+  --cpus=0.5 \
+  busybox sh -c "dd if=/dev/zero of=/dev/null & stress --vm 1 --vm-bytes 200M --vm-hang 5"
+
+# Терминал 2: Мониторим
+docker stats limited-stress
+# Видим: MEM USAGE / LIMIT 200MiB / 256MiB, CPU % не поднимается выше ~50%
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 23 -->
+    <div class="task">
+        <h3>Задача 23: Анализ узких мест ввода-вывода</h3>
+        <p>Система тормозит при операциях с диском. Используя <code>iostat</code> и <code>iotop</code>, определи, какое
+            блочное устройство перегружено и какой процесс создаёт наибольшую нагрузку на ввод-вывод.</p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li><code>iostat -x 1</code> покажет утилизацию (%util) по устройствам в реальном времени.</li>
+                <li>Высокий <code>await</code> (среднее время ожидания) — признак проблем.</li>
+                <li><code>iotop</code> (или <code>sudo iotop -oP</code>) покажет процессы, активно читающие/пишущие.
+                </li>
+                <li>Может потребоваться установка пакетов <code>sysstat</code> и <code>iotop</code>.</li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># Установка утилит (если нужно)
+sudo apt install sysstat iotop -y
+
+# 1. Смотрим статистику по устройствам
+iostat -x 1 5
+# Анализируем колонки: %util (близко к 100%), await (высокий, >10-20ms).
+
+# 2. Находим процесс-виновник
+sudo iotop -oP
+# Видим, что процесс "backup.sh" с PID 9876 читает диск на 50 M/s.
+
+# 3. Анализируем, что именно делает процесс
+sudo lsof -p 9876
+cat /proc/9876/io
+
+# 4. При необходимости ограничиваем процесс через ionice
+sudo ionice -c 2 -n 7 -p 9876  # класс best-effort, низкий приоритет
+</code></pre>
+        </details>
+    </div>
+
+    <!-- Задача 24 -->
+    <div class="task">
+        <h3>Задача 24: Создание Docker-тома и миграция данных</h3>
+        <p>У тебя есть контейнер PostgreSQL, который использует анонимный том (данные внутри контейнера в
+            <code>/var/lib/postgresql/data</code>). Создай именованный том <code>pgdata</code>, скопируй туда данные из
+            запущенного контейнера и перезапусти контейнер с использованием этого именованного тома, сохранив данные.
+        </p>
+
+        <details class="hints">
+            <summary>💡 Подсказки</summary>
+            <ul>
+                <li>Создай том: <code>docker volume create pgdata</code>.</li>
+                <li>Используй временный контейнер с флагом <code>--volumes-from</code>, чтобы скопировать данные.</li>
+                <li>Или используй <code>docker cp</code> для извлечения, а потом копирования через временный контейнер.
+                </li>
+                <li>Простой путь:
+                    <code>docker run --rm -v pgdata:/target -v /var/lib/postgresql/data:/source:ro alpine cp -av /source/. /target/</code>
+                    (но это только если данные на хосте, а не в volume контейнера).</li>
+                <li>Для in-container volumes:
+                    <code>docker run --rm --volumes-from old-postgres -v pgdata:/target alpine cp -av /var/lib/postgresql/data/. /target/</code>.
+                </li>
+            </ul>
+        </details>
+
+        <details class="solution">
+            <summary>✅ Решение</summary>
+            <pre><code># 1. Допустим, контейнер с БД называется "old-postgres"
+docker ps
+
+# 2. Создаём целевой том
+docker volume create pgdata
+
+# 3. Копируем данные через временный контейнер
+docker run --rm \
+  --volumes-from old-postgres \
+  -v pgdata:/target \
+  alpine \
+  cp -av /var/lib/postgresql/data/. /target/
+
+# 4. Останавливаем старый и запускаем новый с томом
+docker stop old-postgres
+docker rm old-postgres
+
+docker run -d --name new-postgres \
+  -v pgdata:/var/lib/postgresql/data \
+  -e POSTGRES_PASSWORD=mysecretpassword \
+  postgres:15
+
+# 5. Проверяем, что данные на месте
+docker exec -it new-postgres psql -U postgres -c "\l"
+</code></pre>
+        </details>
+    </div>
+
+</body>
+
+</html>

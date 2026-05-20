@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-05-11.md",
+                "file": "Что сегодня изучил/2026-05-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-11"
+              "title": "2026-05-20"
             }
           }
         ]
@@ -197,16 +197,31 @@
   },
   "active": "78b1e364c24da994",
   "lastOpenFiles": [
-    "DevOps-Learning/Docker/Сети/Траблшутинг сетей.md",
+    "DevOps-Learning/Docker/Сети/Macvlan и Ipvlan.md",
+    "Что сегодня изучил/2026-05-20.md",
+    "DevOps-Learning/Docker/Сети/Частые ошибки.md",
+    "Macvlan и Ipvlan.md",
     "Что сегодня изучил/2026-05-11.md",
+    "Что сегодня изучил/2026-05-10.md",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/usercontent.html",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek.html",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/api.js.Без названия",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/t7yWKQYMukjjv8_IGYmbP8Un",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/katex.e3bf7abdb0.css",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/main.6dfc92c170.css",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/main.5aa23f4ced.js.Без названия",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/default-vendors.b3428ecdc9.js.Без названия",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/browser.cn.js.Без названия",
+    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/collect-rangers-v5.2.11.js.Без названия",
+    "Оффлайн задачи/Задачи.md",
+    "Оффлайн задачи.md",
+    "DevOps-Learning/Docker/Сети/Траблшутинг сетей.md",
     "DevOps-Learning/Docker/Сети/DNS.md",
     "DevOps-Learning/Docker/Сети/Архитектура сетей.md",
-    "Что сегодня изучил/2026-05-10.md",
     "DevOps-Learning/Docker/Образы/Типичные ошибки в Dockerfile.md",
     "DevOps-Learning/Docker/Образы/Лучшие практики (Best Practices).md",
     "DevOps-Learning/Docker/Образы/Многоэтапная сборка (Multi-stage).md",
     "DevOps-Learning/Docker/Образы/Продвинутые инструкции.md",
-    "DevOps-Learning/Docker/Сети",
     "Что сегодня изучил/2026-05-07.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права/Применение ACL.md",
     "Что сегодня изучил/2026-05-02.md",
@@ -215,24 +230,9 @@
     "DevOps-Learning/Docker/Образы/Dockerfile.md",
     "DevOps-Learning/Docker/Образы/Что такое образ.md",
     "DevOps-Learning/Docker/Знакомство с docker/Логи.md",
-    "DevOps-Learning/Docker/Образы",
     "DevOps-Learning/Docker/Знакомство с docker/Что такое Docker.md",
     "DevOps-Learning/Docker/Без названия.md",
     "Что сегодня изучил/2026-04-30.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Работа внутри контейнера.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Ключевые команды Docker.md",
-    "Что сегодня изучил/2026-04-28.md",
-    "DevOps-Learning/linux/Сеть в Linux/Брандмауэр и фильтрация пакетов — основы iptables.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Основные сущности Docker.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Контейнеризация vs Виртуализация.md",
-    "DevOps-Learning/Docker/Знакомство с docker",
-    "DevOps-Learning/Docker",
-    "DevOps-Learning/linux/Права и пользователи в Linux/Безопасность и автоматизация",
-    "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права",
-    "DevOps-Learning/linux/Права и пользователи в Linux/Пользователи и группы",
-    "DevOps-Learning/linux/Права и пользователи в Linux/Пользователи и права",
-    "DevOps-Learning/linux/Права и пользователи в Linux",
-    "DevOps-Learning/GIT/Внутреннее устройство гит",
     "Без названия.canvas"
   ]
 }
