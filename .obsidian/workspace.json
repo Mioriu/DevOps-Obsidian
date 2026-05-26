@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-05-20.md",
+                "file": "Что сегодня изучил/2026-05-26.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-20"
+              "title": "2026-05-26"
             }
           }
         ]
@@ -197,8 +197,15 @@
   },
   "active": "78b1e364c24da994",
   "lastOpenFiles": [
-    "DevOps-Learning/Docker/Сети/Macvlan и Ipvlan.md",
+    "DevOps-Learning/Docker/Docker-Compose/Основы.md",
+    "Что сегодня изучил/2026-05-26.md",
+    "DevOps-Learning/Docker/Volumes/Продвинутые вещи.md",
+    "DevOps-Learning/Docker/Docker-Compose",
+    "DevOps-Learning/Docker/Volumes/Тома (Volumes, Bind Mounts).md",
+    "DevOps-Learning/Docker/Volumes/docker volume (create,inspect).md",
     "Что сегодня изучил/2026-05-20.md",
+    "DevOps-Learning/Docker/Volumes",
+    "DevOps-Learning/Docker/Сети/Macvlan и Ipvlan.md",
     "DevOps-Learning/Docker/Сети/Частые ошибки.md",
     "Macvlan и Ipvlan.md",
     "Что сегодня изучил/2026-05-11.md",
@@ -211,8 +218,6 @@
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/main.6dfc92c170.css",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/main.5aa23f4ced.js.Без названия",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/default-vendors.b3428ecdc9.js.Без названия",
-    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/browser.cn.js.Без названия",
-    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/collect-rangers-v5.2.11.js.Без названия",
     "Оффлайн задачи/Задачи.md",
     "Оффлайн задачи.md",
     "DevOps-Learning/Docker/Сети/Траблшутинг сетей.md",
@@ -228,11 +233,6 @@
     "Что сегодня изучил/2026-05-01.md",
     "Что сегодня изучил/2026-01-25.md",
     "DevOps-Learning/Docker/Образы/Dockerfile.md",
-    "DevOps-Learning/Docker/Образы/Что такое образ.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Логи.md",
-    "DevOps-Learning/Docker/Знакомство с docker/Что такое Docker.md",
-    "DevOps-Learning/Docker/Без названия.md",
-    "Что сегодня изучил/2026-04-30.md",
     "Без названия.canvas"
   ]
 }
