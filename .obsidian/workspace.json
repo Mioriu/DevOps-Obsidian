@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-05-28.md",
+                "file": "Что сегодня изучил/2026-05-29.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-28"
+              "title": "2026-05-29"
             }
           }
         ]
@@ -195,12 +195,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "78b1e364c24da994",
+  "active": "3da3b9e4a1d1abf0",
   "lastOpenFiles": [
-    "DevOps-Learning/Docker/registry/Локальный registry.md",
+    "DevOps-Learning/Docker/Продвинутые вещи/Ограничение ресурсов и настройка cgroups.md",
+    "Что сегодня изучил/2026-05-29.md",
+    "DevOps-Learning/Docker/Docker-Compose/Основы.md",
+    "DevOps-Learning/Docker/registry/Управление Docker Registry через API и интеграция с CI CD.md",
+    "DevOps-Learning/Docker/Продвинутые вещи",
     "Что сегодня изучил/2026-05-28.md",
-    "DevOps-Learning/Docker/registry/Что такое Docker Registry.md",
     "Что сегодня изучил/2026-05-27.md",
+    "DevOps-Learning/Docker/registry/Локальный registry.md",
+    "DevOps-Learning/Docker/registry/Что такое Docker Registry.md",
     "Что сегодня изучил/2026-02-15.md",
     "Что сегодня изучил/2026-02-05 - 2026-02-06.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права/SUID, SGID и Sticky bit.md",
@@ -212,7 +217,6 @@
     "DevOps-Learning/Docker/Docker-Compose/Внешние .env файлы.md",
     "DevOps-Learning/Docker/Docker-Compose/Сети в Docker Compose.md",
     "Что сегодня изучил/2026-05-26.md",
-    "DevOps-Learning/Docker/Docker-Compose/Основы.md",
     "DevOps-Learning/Docker/Volumes/Продвинутые вещи.md",
     "DevOps-Learning/Docker/Docker-Compose",
     "DevOps-Learning/Docker/Volumes/Тома (Volumes, Bind Mounts).md",
@@ -223,16 +227,12 @@
     "DevOps-Learning/Docker/Сети/Частые ошибки.md",
     "Macvlan и Ipvlan.md",
     "Что сегодня изучил/2026-05-11.md",
-    "Что сегодня изучил/2026-05-10.md",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/usercontent.html",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek.html",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/api.js.Без названия",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/t7yWKQYMukjjv8_IGYmbP8Un",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/katex.e3bf7abdb0.css",
     "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/main.6dfc92c170.css",
-    "Оффлайн задачи/Генерация практических задач DevOps - DeepSeek_files/main.5aa23f4ced.js.Без названия",
-    "Оффлайн задачи/Задачи.md",
-    "Оффлайн задачи.md",
     "Без названия.canvas"
   ]
 }
