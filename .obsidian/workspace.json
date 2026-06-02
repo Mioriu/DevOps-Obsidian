@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "2026-06-01"
             }
+          },
+          {
+            "id": "9298462767736bc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Что сегодня изучил/2026-06-02.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-02"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,11 +210,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "78b1e364c24da994",
+  "active": "9298462767736bc1",
   "lastOpenFiles": [
-    "ProstoDevOps_path/Спринт_1/Docker/Архитектура docker.md",
-    "ProstoDevOps_path/Спринт_1/Docker/Контейнеризация vs Виртуализация.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Работа процессов и логирование в контейнере.md",
+    "Что сегодня изучил/2026-06-02.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Основные команды docker.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Images.md",
     "Что сегодня изучил/2026-06-01.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Контейнеризация vs Виртуализация.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Архитектура docker.md",
     "Что сегодня изучил/2026-05-29.md",
     "ProstoDevOps_path/Спринт_1/Docker",
     "ProstoDevOps_path/Спринт_1",
@@ -229,10 +248,6 @@
     "DevOps-Learning/Docker/Docker-Compose/Внешние .env файлы.md",
     "DevOps-Learning/Docker/Docker-Compose/Сети в Docker Compose.md",
     "Что сегодня изучил/2026-05-26.md",
-    "DevOps-Learning/Docker/Volumes/Продвинутые вещи.md",
-    "DevOps-Learning/Docker/Volumes/Тома (Volumes, Bind Mounts).md",
-    "DevOps-Learning/Docker/Volumes/docker volume (create,inspect).md",
-    "Что сегодня изучил/2026-05-20.md",
     "Без названия.canvas"
   ]
 }
