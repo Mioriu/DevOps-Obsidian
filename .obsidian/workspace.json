@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "2026-06-02"
             }
+          },
+          {
+            "id": "c74381f1c59e9ef2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Что сегодня изучил/2026-06-04.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-04"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -210,12 +224,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9298462767736bc1",
+  "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
-    "ProstoDevOps_path/Спринт_1/Docker/Работа процессов и логирование в контейнере.md",
-    "Что сегодня изучил/2026-06-02.md",
-    "ProstoDevOps_path/Спринт_1/Docker/Основные команды docker.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Dockerfile.md",
+    "Что сегодня изучил/2026-06-04.md",
     "ProstoDevOps_path/Спринт_1/Docker/Images.md",
+    "ProstoDevOps_path/Practice/Docker/Task_1.md",
+    "Что сегодня изучил/2026-06-02.md",
+    "ProstoDevOps_path/Practice/Docker/Task_2.md",
+    "ProstoDevOps_path/Practice/Docker/Task_8.md",
+    "ProstoDevOps_path/Practice/Docker/Task_10.md",
+    "ProstoDevOps_path/Practice/Docker",
+    "ProstoDevOps_path/Best_Practice/Docker/Dockerfile_best_practice_prostodevops.pdf",
+    "Без названия 2.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Работа процессов и логирование в контейнере.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Основные команды docker.md",
     "Что сегодня изучил/2026-06-01.md",
     "ProstoDevOps_path/Спринт_1/Docker/Контейнеризация vs Виртуализация.md",
     "ProstoDevOps_path/Спринт_1/Docker/Архитектура docker.md",
@@ -223,14 +246,12 @@
     "ProstoDevOps_path/Спринт_1/Docker",
     "ProstoDevOps_path/Спринт_1",
     "ProstoDevOps_path/Без названия.md",
-    "ProstoDevOps_path/Best_Practice/Docker/Dockerfile_best_practice_prostodevops.pdf",
     "ProstoDevOps_path/Best_Practice/Docker",
     "ProstoDevOps_path/Best_Practice/Новая папка",
     "ProstoDevOps_path/Best_Practice",
     "ProstoDevOps_path/Новая папка",
     "ProstoDevOps_path/Practice",
     "ProstoDevOps_path/Карточки",
-    "ProstoDevOps_path",
     "DevOps-Learning/Docker/Продвинутые вещи/Ограничение ресурсов и настройка cgroups.md",
     "DevOps-Learning/Docker/Docker-Compose/Основы.md",
     "DevOps-Learning/Docker/registry/Управление Docker Registry через API и интеграция с CI CD.md",
@@ -241,13 +262,6 @@
     "Что сегодня изучил/2026-02-15.md",
     "Что сегодня изучил/2026-02-05 - 2026-02-06.md",
     "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права/SUID, SGID и Sticky bit.md",
-    "DevOps-Learning/Docker/Docker-Compose/Балансировка и --scale.md",
-    "DevOps-Learning/Docker/Docker-Compose/Override, секция build.md",
-    "DevOps-Learning/Docker/Docker-Compose/Рестарт-политики.md",
-    "DevOps-Learning/Docker/Docker-Compose/Профили в compose.md",
-    "DevOps-Learning/Docker/Docker-Compose/Внешние .env файлы.md",
-    "DevOps-Learning/Docker/Docker-Compose/Сети в Docker Compose.md",
-    "Что сегодня изучил/2026-05-26.md",
     "Без названия.canvas"
   ]
 }
