@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-06-04.md",
+                "file": "ProstoDevOps_path/Practice/Docker/Task_6.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-04"
+              "title": "Task_6"
             }
           }
         ],
@@ -226,8 +226,10 @@
   },
   "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
-    "ProstoDevOps_path/Спринт_1/Docker/Dockerfile.md",
+    "ProstoDevOps_path/Practice/Docker/Task_7.md",
+    "ProstoDevOps_path/Practice/Docker/Task_6.md",
     "Что сегодня изучил/2026-06-04.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Dockerfile.md",
     "ProstoDevOps_path/Спринт_1/Docker/Images.md",
     "ProstoDevOps_path/Practice/Docker/Task_1.md",
     "Что сегодня изучил/2026-06-02.md",
@@ -260,8 +262,6 @@
     "DevOps-Learning/Docker/registry/Локальный registry.md",
     "DevOps-Learning/Docker/registry/Что такое Docker Registry.md",
     "Что сегодня изучил/2026-02-15.md",
-    "Что сегодня изучил/2026-02-05 - 2026-02-06.md",
-    "DevOps-Learning/linux/Права и пользователи в Linux/Расширенные права/SUID, SGID и Sticky bit.md",
     "Без названия.canvas"
   ]
 }
