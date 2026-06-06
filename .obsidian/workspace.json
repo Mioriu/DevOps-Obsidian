@@ -8,49 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "78b1e364c24da994",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Что сегодня изучил/2026-06-01.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-06-01"
-            }
-          },
-          {
-            "id": "9298462767736bc1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Что сегодня изучил/2026-06-02.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-06-02"
-            }
-          },
-          {
             "id": "c74381f1c59e9ef2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ProstoDevOps_path/Practice/Docker/Task_6.md",
+                "file": "Что сегодня изучил/2026-06-06.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Task_6"
+              "title": "2026-06-06"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -226,14 +197,23 @@
   },
   "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
-    "ProstoDevOps_path/Practice/Docker/Task_7.md",
-    "ProstoDevOps_path/Practice/Docker/Task_6.md",
     "Что сегодня изучил/2026-06-04.md",
+    "Что сегодня изучил/2026-06-06.md",
+    "ProstoDevOps_path/Созвоны/Разбор тестового с пайтон веб-приложенем.md",
+    "ProstoDevOps_path/Practice/Docker/Task_5.md",
+    "ProstoDevOps_path/Practice/Docker/Task_6.md",
+    "ProstoDevOps_path/Practice/Docker/Task_2.md",
+    "ProstoDevOps_path/Спринт_1/Docker/Multi-Architecture Builds.md",
+    "ProstoDevOps_path/Practice/Docker/Task_1.md",
+    "ProstoDevOps_path/Созвоны",
+    "Что сегодня изучил/2026-06-02.md",
+    "Что сегодня изучил/2026-05-29.md",
+    "Что сегодня изучил/2026-05-28.md",
+    "Что сегодня изучил/2026-04-28.md",
+    "Что сегодня изучил/2026-06-01.md",
+    "ProstoDevOps_path/Practice/Docker/Task_7.md",
     "ProstoDevOps_path/Спринт_1/Docker/Dockerfile.md",
     "ProstoDevOps_path/Спринт_1/Docker/Images.md",
-    "ProstoDevOps_path/Practice/Docker/Task_1.md",
-    "Что сегодня изучил/2026-06-02.md",
-    "ProstoDevOps_path/Practice/Docker/Task_2.md",
     "ProstoDevOps_path/Practice/Docker/Task_8.md",
     "ProstoDevOps_path/Practice/Docker/Task_10.md",
     "ProstoDevOps_path/Practice/Docker",
@@ -241,10 +221,8 @@
     "Без названия 2.md",
     "ProstoDevOps_path/Спринт_1/Docker/Работа процессов и логирование в контейнере.md",
     "ProstoDevOps_path/Спринт_1/Docker/Основные команды docker.md",
-    "Что сегодня изучил/2026-06-01.md",
     "ProstoDevOps_path/Спринт_1/Docker/Контейнеризация vs Виртуализация.md",
     "ProstoDevOps_path/Спринт_1/Docker/Архитектура docker.md",
-    "Что сегодня изучил/2026-05-29.md",
     "ProstoDevOps_path/Спринт_1/Docker",
     "ProstoDevOps_path/Спринт_1",
     "ProstoDevOps_path/Без названия.md",
@@ -253,15 +231,7 @@
     "ProstoDevOps_path/Best_Practice",
     "ProstoDevOps_path/Новая папка",
     "ProstoDevOps_path/Practice",
-    "ProstoDevOps_path/Карточки",
     "DevOps-Learning/Docker/Продвинутые вещи/Ограничение ресурсов и настройка cgroups.md",
-    "DevOps-Learning/Docker/Docker-Compose/Основы.md",
-    "DevOps-Learning/Docker/registry/Управление Docker Registry через API и интеграция с CI CD.md",
-    "Что сегодня изучил/2026-05-28.md",
-    "Что сегодня изучил/2026-05-27.md",
-    "DevOps-Learning/Docker/registry/Локальный registry.md",
-    "DevOps-Learning/Docker/registry/Что такое Docker Registry.md",
-    "Что сегодня изучил/2026-02-15.md",
     "Без названия.canvas"
   ]
 }
