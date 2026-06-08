@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ProstoDevOps_path/Practice/Docker/Task_3.md",
+                "file": "Что сегодня изучил/2026-06-08.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Task_3"
+              "title": "2026-06-08"
             }
           }
         ]
@@ -197,7 +197,11 @@
   },
   "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
+    "ProstoDevOps_path/Спринт_1/Сети/CIDR и подсети.md",
+    "ProstoDevOps_path/Спринт_1/Сети/База.md",
+    "Что сегодня изучил/2026-06-08.md",
     "Что сегодня изучил/2026-06-07.md",
+    "ProstoDevOps_path/Спринт_1/Сети",
     "ProstoDevOps_path/Practice/Docker/Task_3.md",
     "ProstoDevOps_path/Спринт_1/Docker/docker compose.md",
     "ProstoDevOps_path/Спринт_1/Docker/Сети.md",
@@ -221,18 +225,14 @@
     "ProstoDevOps_path/Спринт_1/Docker/Dockerfile.md",
     "ProstoDevOps_path/Спринт_1/Docker/Images.md",
     "ProstoDevOps_path/Practice/Docker/Task_8.md",
-    "ProstoDevOps_path/Practice/Docker/Task_10.md",
     "ProstoDevOps_path/Practice/Docker",
     "ProstoDevOps_path/Best_Practice/Docker/Dockerfile_best_practice_prostodevops.pdf",
-    "Без названия 2.md",
-    "ProstoDevOps_path/Спринт_1/Docker/Работа процессов и логирование в контейнере.md",
     "ProstoDevOps_path/Спринт_1/Docker",
     "ProstoDevOps_path/Спринт_1",
     "ProstoDevOps_path/Best_Practice/Docker",
     "ProstoDevOps_path/Best_Practice/Новая папка",
     "ProstoDevOps_path/Best_Practice",
     "ProstoDevOps_path/Новая папка",
-    "ProstoDevOps_path/Practice",
     "Без названия.canvas"
   ]
 }
