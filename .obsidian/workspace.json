@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-06-07.md",
+                "file": "ProstoDevOps_path/Practice/Docker/Task_3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-07"
+              "title": "Task_3"
             }
           }
         ]
@@ -197,9 +197,10 @@
   },
   "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
+    "Что сегодня изучил/2026-06-07.md",
+    "ProstoDevOps_path/Practice/Docker/Task_3.md",
     "ProstoDevOps_path/Спринт_1/Docker/docker compose.md",
     "ProstoDevOps_path/Спринт_1/Docker/Сети.md",
-    "Что сегодня изучил/2026-06-07.md",
     "ProstoDevOps_path/Practice/Docker/Task_4.md",
     "ProstoDevOps_path/Practice/Docker/Task_9.md",
     "ProstoDevOps_path/Созвоны/Разбор тестового с пайтон веб-приложенем.md",
@@ -225,7 +226,6 @@
     "ProstoDevOps_path/Best_Practice/Docker/Dockerfile_best_practice_prostodevops.pdf",
     "Без названия 2.md",
     "ProstoDevOps_path/Спринт_1/Docker/Работа процессов и логирование в контейнере.md",
-    "ProstoDevOps_path/Спринт_1/Docker/Основные команды docker.md",
     "ProstoDevOps_path/Спринт_1/Docker",
     "ProstoDevOps_path/Спринт_1",
     "ProstoDevOps_path/Best_Practice/Docker",
