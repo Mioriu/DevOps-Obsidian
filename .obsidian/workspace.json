@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-06-11.md",
+                "file": "Что сегодня изучил/2026-06-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-11"
+              "title": "2026-06-12"
             }
           }
         ]
@@ -195,21 +195,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3da3b9e4a1d1abf0",
+  "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
-    "ProstoDevOps_path/Спринт_1/Сети/MAC,ARP,VLAN.md",
-    "Что сегодня изучил/2026-06-11.md",
-    "ProstoDevOps_path/Спринт_1/Сети/SSL TLS.md",
-    "ProstoDevOps_path/Спринт_1/Сети/TTL.md",
-    "ProstoDevOps_path/Спринт_1/Сети/TCP UDP.md",
-    "ProstoDevOps_path/Спринт_1/Сети/DHCP и NAT.md",
-    "ProstoDevOps_path/Спринт_1/Сети/HTTP.md",
-    "Что сегодня изучил/2026-02-20.md",
-    "ProstoDevOps_path/Спринт_1/Сети/DNS.md",
-    "Что сегодня изучил/2026-06-10.md",
-    "ProstoDevOps_path/Спринт_1/Сети/Firewalls, iptables, nftables.md",
+    "ProstoDevOps_path/Спринт_1/Сети/CDN.md",
+    "ProstoDevOps_path/Спринт_1/Сети/Маршрутизация.md",
+    "ProstoDevOps_path/Спринт_1/Сети/Балансировка.md",
     "ProstoDevOps_path/Спринт_1/Сети/OCI.md",
+    "ProstoDevOps_path/Спринт_1/Сети/SSL TLS.md",
+    "ProstoDevOps_path/Спринт_1/Сети/TCP UDP.md",
+    "ProstoDevOps_path/Спринт_1/Сети/TTL.md",
     "ProstoDevOps_path/Спринт_1/Сети/CIDR и подсети.md",
+    "ProstoDevOps_path/Спринт_1/Сети/DHCP и NAT.md",
+    "ProstoDevOps_path/Спринт_1/Сети/DNS.md",
+    "ProstoDevOps_path/Спринт_1/Сети/Firewalls, iptables, nftables.md",
+    "ProstoDevOps_path/Спринт_1/Сети/HTTP.md",
+    "ProstoDevOps_path/Спринт_1/Сети/MAC,ARP,VLAN.md",
+    "ProstoDevOps_path/Спринт_1/Сети/VPN.md",
+    "ProstoDevOps_path/Спринт_1/Сети/Web servers и reverse proxy.md",
+    "Что сегодня изучил/2026-06-12.md",
+    "Что сегодня изучил/2026-06-11.md",
+    "Что сегодня изучил/2026-06-10.md",
+    "Что сегодня изучил/2026-02-20.md",
     "Что сегодня изучил/2026-06-09.md",
     "Что сегодня изучил/2026-06-08.md",
     "ProstoDevOps_path/Спринт_1/Сети/База.md",
@@ -218,12 +224,6 @@
     "ProstoDevOps_path/Practice/Docker/Task_3.md",
     "ProstoDevOps_path/Спринт_1/Docker/docker compose.md",
     "ProstoDevOps_path/Спринт_1/Docker/Сети.md",
-    "ProstoDevOps_path/Practice/Docker/Task_4.md",
-    "ProstoDevOps_path/Practice/Docker/Task_9.md",
-    "ProstoDevOps_path/Созвоны/Разбор тестового с пайтон веб-приложенем.md",
-    "Что сегодня изучил/2026-06-06.md",
-    "Что сегодня изучил/2026-06-04.md",
-    "ProstoDevOps_path/Practice/Docker/Task_5.md",
     "ProstoDevOps_path/Созвоны",
     "ProstoDevOps_path/Practice/Docker",
     "ProstoDevOps_path/Best_Practice/Docker/Dockerfile_best_practice_prostodevops.pdf",
