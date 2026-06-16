@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Что сегодня изучил/2026-06-12.md",
+                "file": "Что сегодня изучил/2026-06-17.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-12"
+              "title": "2026-06-17"
             }
           }
         ]
@@ -197,10 +197,18 @@
   },
   "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
+    "ProstoDevOps_path/Спринт 2/Linux/RAID и LVM — обзорно.md",
+    "ProstoDevOps_path/Спринт 2/Linux/Файловые системы, mount и fstab.md",
+    "ProstoDevOps_path/Спринт 2/Linux/Структура файловой системы.md",
+    "Что сегодня изучил/2026-06-17.md",
+    "ProstoDevOps_path/Спринт_1/Сети/Общие вопросы.md",
+    "ProstoDevOps_path/Спринт 2/Linux",
+    "ProstoDevOps_path/Спринт 2",
+    "Что сегодня изучил/2026-06-12.md",
     "ProstoDevOps_path/Спринт_1/Сети/CDN.md",
-    "ProstoDevOps_path/Спринт_1/Сети/Маршрутизация.md",
     "ProstoDevOps_path/Спринт_1/Сети/Балансировка.md",
     "ProstoDevOps_path/Спринт_1/Сети/OCI.md",
+    "ProstoDevOps_path/Спринт_1/Сети/Маршрутизация.md",
     "ProstoDevOps_path/Спринт_1/Сети/SSL TLS.md",
     "ProstoDevOps_path/Спринт_1/Сети/TCP UDP.md",
     "ProstoDevOps_path/Спринт_1/Сети/TTL.md",
@@ -212,18 +220,12 @@
     "ProstoDevOps_path/Спринт_1/Сети/MAC,ARP,VLAN.md",
     "ProstoDevOps_path/Спринт_1/Сети/VPN.md",
     "ProstoDevOps_path/Спринт_1/Сети/Web servers и reverse proxy.md",
-    "Что сегодня изучил/2026-06-12.md",
     "Что сегодня изучил/2026-06-11.md",
     "Что сегодня изучил/2026-06-10.md",
     "Что сегодня изучил/2026-02-20.md",
     "Что сегодня изучил/2026-06-09.md",
     "Что сегодня изучил/2026-06-08.md",
-    "ProstoDevOps_path/Спринт_1/Сети/База.md",
-    "Что сегодня изучил/2026-06-07.md",
     "ProstoDevOps_path/Спринт_1/Сети",
-    "ProstoDevOps_path/Practice/Docker/Task_3.md",
-    "ProstoDevOps_path/Спринт_1/Docker/docker compose.md",
-    "ProstoDevOps_path/Спринт_1/Docker/Сети.md",
     "ProstoDevOps_path/Созвоны",
     "ProstoDevOps_path/Practice/Docker",
     "ProstoDevOps_path/Best_Practice/Docker/Dockerfile_best_practice_prostodevops.pdf",
@@ -231,8 +233,6 @@
     "ProstoDevOps_path/Спринт_1",
     "ProstoDevOps_path/Best_Practice/Docker",
     "ProstoDevOps_path/Best_Practice/Новая папка",
-    "ProstoDevOps_path/Best_Practice",
-    "ProstoDevOps_path/Новая папка",
     "Без названия.canvas"
   ]
 }
