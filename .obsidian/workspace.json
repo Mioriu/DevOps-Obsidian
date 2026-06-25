@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ProstoDevOps_path/Спринт 2/Linux/Процессы.md",
+                "file": "Что сегодня изучил/2026-06-25.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Процессы"
+              "title": "2026-06-25"
             }
           }
         ]
@@ -197,8 +197,11 @@
   },
   "active": "c74381f1c59e9ef2",
   "lastOpenFiles": [
-    "ProstoDevOps_path/Спринт_1/Сети/MAC,ARP,VLAN.md",
+    "ProstoDevOps_path/Спринт 2/Linux/Работа с сетью (траблшутинг).md",
+    "ProstoDevOps_path/Спринт 2/Linux/SystemD.md",
+    "Что сегодня изучил/2026-06-25.md",
     "ProstoDevOps_path/Спринт 2/Linux/Процессы.md",
+    "ProstoDevOps_path/Спринт_1/Сети/MAC,ARP,VLAN.md",
     "Что сегодня изучил/2026-06-18.md",
     "ProstoDevOps_path/Спринт 2/Linux/SSH.md",
     "ProstoDevOps_path/Спринт 2/Linux/Работа с пакетами.md",
@@ -223,9 +226,6 @@
     "ProstoDevOps_path/Спринт_1/Сети/DHCP и NAT.md",
     "ProstoDevOps_path/Спринт_1/Сети/DNS.md",
     "ProstoDevOps_path/Спринт_1/Сети/Firewalls, iptables, nftables.md",
-    "ProstoDevOps_path/Спринт_1/Сети/HTTP.md",
-    "ProstoDevOps_path/Спринт_1/Сети/VPN.md",
-    "ProstoDevOps_path/Спринт_1/Сети/Web servers и reverse proxy.md",
     "ProstoDevOps_path/Спринт_1/Сети",
     "ProstoDevOps_path/Созвоны",
     "ProstoDevOps_path/Practice/Docker",
