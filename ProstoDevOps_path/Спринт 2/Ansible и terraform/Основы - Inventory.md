@@ -55,7 +55,22 @@ all:  children:    webservers:      hosts:        web1:          ansible_host: 1
 inicopy
 
 ```ini
-[prod_webservers]prod-web1 ansible_host=10.0.1.10prod-web2 ansible_host=10.0.1.11 [prod_databases]prod-db1 ansible_host=10.0.1.20 [staging_webservers]staging-web1 ansible_host=10.0.2.10 [staging_databases]staging-db1 ansible_host=10.0.2.20 [prod:children]prod_webserversprod_databases [staging:children]staging_webserversstaging_databases [webservers:children]prod_webserversstaging_webservers [databases:children]prod_databasesstaging_databases
+[prod_webservers]prod-web1 ansible_host=10.0.1.10prod-web2 ansible_host=10.0.1.11 [prod_databases]prod-db1 ansible_host=10.0.1.20 
+[staging_webservers]
+staging-web1 ansible_host=10.0.2.10 
+[staging_databases]staging-db1 ansible_host=10.0.2.20 
+[prod:children]
+prod_webserver
+sprod_databases 
+[staging:children]
+staging_webservers
+staging_databases 
+[webservers:children]
+prod_webservers
+staging_webservers 
+[databases:children]
+prod_databases
+staging_databases
 ```
 
 Смотрите, что тут происходит. Синтаксис `[prod:children]` означает: группа `prod` состоит из дочерних групп `prod_webservers` и `prod_databases`. То есть, мы создаём иерархию.
